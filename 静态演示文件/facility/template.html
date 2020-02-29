@@ -1,0 +1,160 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>设备模板</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="../layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../css/admin.css" media="all">
+    <script src="../layui/layui.js"></script>
+    <style>
+        .device-item-container {
+            width: 278px;
+            position: relative;
+            float: left;
+            margin-right: 20px;
+            margin-bottom: 20px
+        }
+
+        .item-wrap {
+            width: 100%;
+            margin-left: 20px;
+            position: relative;
+        }
+
+        .item-wrap .item-wrap-shadow {
+            border-radius: 6px;
+            background: 0 0;
+            z-index: 99;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all .5s linear
+        }
+
+        .item-wrap .item-content {
+            color: gray;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            overflow: hidden
+        }
+
+        .item-wrap .item-top {
+            border-bottom: 1px solid #ddd;
+            height: 43px;
+            background: linear-gradient(#4c7fe6, #59abf6);
+            color: #fff;
+            overflow: hidden
+        }
+
+        .item-wrap .item-middle {
+            height: 115px;
+        }
+
+        .item-wrap .item-bottom {
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .locate-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+
+        .add-clear-fix:after,
+        .add-clear-fix:before {
+            display: table;
+            content: " ";
+            clear: both
+        }
+
+        .item-wrap .item {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none
+        }
+
+        .item-wrap .edit {
+            width: 100%;
+            height: 100%;
+            fill: none;
+            stroke: #fff;
+            stroke-miterlimit: 10
+        }
+
+        .item-wrap .edit:hover {
+            fill: #52d2b2;
+            stroke: #52d2b2
+        }
+
+        .locate-left-center,
+        .locate-right-center {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%)
+        }
+
+        .locate-right-center {
+            right: 0
+        }
+
+        .row-text-overflow {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            max-width: 100%
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="device-item-container">
+        <div class="item-wrap">
+            <div class="item-vrap-shadow">
+                <div class="locate-center add-clear-fix">
+                    <div data-target="item-edit" title="编辑" class="item item-edit">
+                        <!-- <svg aria-hidden="true" class="svg-icon edit">
+                            <use xlink:href="#icon-edit"></use>
+                        </svg> -->
+                        <span>编辑</span>
+                    </div>
+                </div>
+            </div>
+            <div class="item-content">
+                <div class="item-top" style="position: relative;">
+                    <div title="设备名称" class="locate-left-center row-text-overflow fs16"
+                        style="left: 20px; padding-right: 70px;">
+                        设备名称
+                    </div>
+                    <div class="locate-right-center fs14" style="right: 20px; cursor: pointer;">
+                        详情
+                    </div>
+                </div>
+                <div class="item-middle"></div>
+                <div class="item-bottom"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        layui.config({
+            base: './' //静态资源所在路径
+        }).extend({
+            index: 'lib/index' //主入口模块
+        }).use(['index', 'console']);
+    </script>
+
+    <div class="layui-layer-move"></div>
+</body>
+
+</html>

@@ -19,6 +19,11 @@
             <div class="layui-header">
                 <!-- 头部区域 -->
                 <ul class="layui-nav layui-layout-left">
+                    <li class="layui-nav-item layadmin-flexible" lay-unselect="">
+                        <a href="javascript:;" layadmin-event="flexible" title="侧边伸缩">
+                            <i class="layui-icon layui-icon-shrink-right" id="LAY_app_flexible"></i>
+                        </a>
+                    </li>
                     <li class="layui-nav-item layui-hide-xs" lay-unselect>
                         <a href="http://www.whgkdz.com/" target="_blank" title="前台">
                             <i class="layui-icon layui-icon-website"></i>
@@ -64,20 +69,6 @@
                     </div>
                     <ul class="layui-nav layui-nav-tree" lay-shrink="all" id="LAY-system-side-menu"
                         lay-filter="layadmin-system-side-menu">
-                        <li data-name="home" class="layui-nav-item">
-                            <a href="javascript:;" lay-tips="主页" lay-direction="2">
-                                <i class="layui-icon layui-icon-component"></i>
-                                <cite>主页</cite>
-                            </a>
-                            <dl class="layui-nav-child">
-                                <dd data-name="page1">
-                                    <a lay-href="home/page1.html">主页一</a>
-                                </dd>
-                                <dd data-name="page2">
-                                    <a lay-href="home/page2.html">主页二</a>
-                                </dd>
-                            </dl>
-                        </li>
                         <li data-name="facility" class="layui-nav-item">
                             <a href="javascript:;" lay-tips="设备" lay-direction="2">
                                 <i class="layui-icon layui-icon-component"></i>
@@ -85,13 +76,10 @@
                             </a>
                             <dl class="layui-nav-child">
                                 <dd data-name="manage">
-                                    <a lay-href="component/button/index.html">设备管理</a>
+                                    <a lay-href="facility/index.html">设备管理</a>
                                 </dd>
                                 <dd data-name="type">
-                                    <a lay-href="component/table/static.html">设备类型</a>
-                                </dd>
-                                <dd data-name="status">
-                                    <a lay-href="component/table/static.html">设备状态</a>
+                                    <a lay-href="facility/template.html">设备模板</a>
                                 </dd>
                             </dl>
                         </li>
